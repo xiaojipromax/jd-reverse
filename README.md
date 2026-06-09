@@ -47,6 +47,8 @@ node JD.js 'pc_ware_style_rec' '{"skuIds":[10012345678],"page":1}'
 
 ## 注意
 
-- Cookie、pvid、地理代码等隐私字段已替换为 placeholder
+- `env.js` 和 `JD.js` 里的 Cookie、pvid、area 等是真实值示例，替换成你自己的即可使用
+- Cookie 从浏览器 F12 → Application → Cookies → 搜索 jd.com 复制
+- pvid / area 从京东搜索页 Network 请求体里拿
 - validationToken 为客户自定义值（非原始值）
 - 仅供学习研究，请遵守平台使用协议

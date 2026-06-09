@@ -2,8 +2,9 @@
 const args = process.argv.slice(2)
 const functionId = args[0] || 'pc_search_searchWare'
 const bodyJson   = args[1] || JSON.stringify({
-    enc: "utf-8", pvid: "placeholder",
-    from: "home", area: "0_0_0_0", page: 1, mode: "",
+    // 替换成你自己的 pvid 和 area（浏览器搜索页Network里搜 pvid 字段）
+    enc: "utf-8", pvid: "371b279618b340a7a4d42639a6943c63",
+    from: "home", area: "12_959_3405_40181", page: 1, mode: "",
     concise: false, hoverPictures: false, newAdvRepeat: false,
     mixerParam: false, new_interval: true, s: 1
 })

@@ -259,7 +259,8 @@ createConstructor('HTMLBodyElement', true, [], {}, 'HTMLElement');
 document = new HTMLDocument({
     all: watch(new HTMLAllCollection({}, null, 'JR'), 'document.all'),
     documentElement: watch(new HTMLHtmlElement({}, null, 'JR'), 'document.documentElement'),
-    cookie: '__jdu=placeholder; areaId=0; PCSYCityID=CN_000000_000000_0; TrackID=placeholder; pinId=placeholder; pin=placeholder; unick=placeholder; __jdc=placeholder; __jda=placeholder',
+    // 替换成你自己的京东Cookie（浏览器F12 → Application → Cookies → 搜索.jd.com）
+    cookie: 'unpl=JF8EAIBnNSttCExQUE9XGRRAGA5XDA4LGBQGbm9VU1VdTFFWGFVLEBl7XlVdWhRKEB9uZxRUX1NPUQ4ZAysiE0xeUllbCk8UMzw3XQEZGh8ERklbdRoXSl9SW10ISxEzX2QFZF1Ze1EDHgoTFBNNbVVuWjh7JwNqYwBcWWhKZAQrMhoiEw; __jdu=47499727; __jdv=229668127|baidu-search|t_262767352_baidusearch|cpc|9603741117_0_a65ded37abb2cb2b2409a69464b2fa38|1780293433131; areaId=12; shshshfpa=acc528aa-a6c2-9e79-d894-f7ae1df83e7d-1780293498; shshshfpx=acc528aa-a6c2-9e79-d894-f7ae1df83e7d-1780293498; PCSYCityID=CN_320000_321200_0; TrackID=1c14gjAHQYfZNfllgc02IIeSbyNAlnoW7wtpLtBtcB17M8HlxRH99UCQSeCCLcMjLsloBASozdd8hA-TajwmPdxEkEuYAYjG133ZddspibPI; pinId=G7Cva4vfFLMCnFMAeIYnhQ; pin=jd_IVaCmDVVzFKG; unick=jd_lj77tnr0z6uu3e; ceshi3.com=000; _tp=jfDYMaDj6n44n0WfKJ%2FirA%3D%3D; wlfstk_smdl=1mo4tywiqx74nbk55aa6ri3pqsgcicyj; mail_times=4%2C1%2C1780293539105; umc_count=1; o2State=; is_avif=onAVIF; cid=9; ipLoc-djd=12-959-3405-40181; __jdc=143920055; shshshfpb=BApXWJu-AgftAM4a6VIVwzWpdntmmPo-nBsJoM7do9xJ1PdZfQq_gkznmqB3MKaBYVK4ny6vnsaxlI-0zufkHsY4uO1u2psHP2R8; 3AB9D23F7A4B3CSS=jdd03JIODCFCFN3FWPHP7NBYGW26DKGBFPB4JTQ5MEKBHQKCESGJBHVP6WIITH7YE6RJISE53OBVZPSBG33WKR534CDDB7IAAAAM6QKEHVLQAAAAACCYYN46ZC7HUREX; 3AB9D23F7A4B3C9B=JIODCFCFN3FWPHP7NBYGW26DKGBFPB4JTQ5MEKBHQKCESGJBHVP6WIITH7YE6RJISE53OBVZPSBG33WKR534CDDB7I; __jda=143920055.47499727.1780293269.1780306168.1780321752.3',
     head: watch(new HTMLHeadElement({childElementCount: 50}, null, 'JR'), 'document.head'),
     body: watch(new HTMLBodyElement({
         childElementCount: 24,
@@ -289,14 +290,15 @@ window.navigator = navigator
 createConstructor('Location', true, [], {}, 'WindowProperties');
 location = new Location({
     "ancestorOrigins": {},
-    "href": "https://search.jd.com/Search?keyword=iphone&enc=utf-8&pvid=placeholder&themeColor=&from=home&spmTag=placeholder",
+    // 替换成你自己的搜索URL（浏览器复制即可）
+    "href": "https://search.jd.com/Search?keyword=iphone&enc=utf-8&pvid=371b279618b340a7a4d42639a6943c63&themeColor=&from=home&spmTag=YTAyMTkuYjAwMjM1Ni5jMDAwMDcxNjMuNiU0MDE3ODAyOTM1ODI4NzIlMjM0NzQ5OTcyNyUyMzIxMjY2MzU1MjQ",
     "origin": "https://search.jd.com",
     "protocol": "https:",
     "host": "search.jd.com",
     "hostname": "search.jd.com",
     "port": "",
     "pathname": "/Search",
-    "search": "?keyword=iphone&enc=utf-8&pvid=placeholder&themeColor=&from=home&spmTag=placeholder",
+    "search": "?keyword=iphone&enc=utf-8&pvid=371b279618b340a7a4d42639a6943c63&themeColor=&from=home&spmTag=YTAyMTkuYjAwMjM1Ni5jMDAwMDcxNjMuNiU0MDE3ODAyOTM1ODI4NzIlMjM0NzQ5OTcyNyUyMzIxMjY2MzU1MjQ",
     "hash": ""
 }, null, 'JR')
 window.location = location
