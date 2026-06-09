@@ -20,21 +20,24 @@
 
 ## 用法
 
-```bash
-npm install crypto-js
-```
+### 参数从哪来
+
+打开浏览器 DevTools → Network，筛选 XHR，搜京东商品或操作页面，找到 `functionId`（接口名，如 `pc_search_searchWare`）和 **请求体 JSON**。这两个就是入参。
 
 ### 直接跑 JD.js
 
 ```bash
-# 默认参数（搜索接口）
+npm install crypto-js
+
+# 默认示例（搜索接口，参数固定写死在代码里）
 node JD.js
 
-# 自定义参数：node JD.js <functionId> <请求体JSON>
+# 换成你自己的参数：node JD.js <functionId> <请求体JSON>
 node JD.js 'pc_search_searchWare' '{"enc":"utf-8","page":1,"s":1,"keyword":"手机"}'
+node JD.js 'pc_ware_style_rec' '{"skuIds":[10012345678],"page":1}'
 ```
 
-- **输入**：functionId（京东接口名）+ body JSON 字符串（内部会 SHA256 后参与签名）
+- **输入**：functionId + body JSON（直接从浏览器复制，内部自动 SHA256）
 - **输出**：终端打印完整签名结果 JSON，包含 `h5st`、`sign` 等加密字段
 
 ## 环境
