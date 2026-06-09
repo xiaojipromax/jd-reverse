@@ -24,17 +24,18 @@
 npm install crypto-js
 ```
 
-### 直接跑 JD.js，终端输出签名结果 JSON
+### 直接跑 JD.js
 
 ```bash
-# 默认 functionId（pc_search_searchWare）
+# 默认参数（搜索接口）
 node JD.js
 
-# 指定 functionId 和 body
-node JD.js 'pc_search_searchWare' '{"enc":"utf-8","page":1,"s":1}'
+# 自定义参数：node JD.js <functionId> <请求体JSON>
+node JD.js 'pc_search_searchWare' '{"enc":"utf-8","page":1,"s":1,"keyword":"手机"}'
 ```
 
-终端打印完整的签名结果 JSON（含 h5st 等字段）。
+- **输入**：functionId（京东接口名）+ body JSON 字符串（内部会 SHA256 后参与签名）
+- **输出**：终端打印完整签名结果 JSON，包含 `h5st`、`sign` 等加密字段
 
 ## 环境
 
