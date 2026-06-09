@@ -21,21 +21,20 @@
 ## 用法
 
 ```bash
-# 安装依赖
 npm install crypto-js
+```
 
-# 默认测试（pc_search_searchWare）
+### 直接跑 JD.js，终端输出签名结果 JSON
+
+```bash
+# 默认 functionId（pc_search_searchWare）
 node JD.js
 
 # 指定 functionId 和 body
 node JD.js 'pc_search_searchWare' '{"enc":"utf-8","page":1,"s":1}'
 ```
 
-```js
-// 作为模块引用
-const sign = require('./JD.js');
-const result = sign.sign('pc_search_searchWare', JSON.stringify(body));
-```
+终端打印完整的签名结果 JSON（含 h5st 等字段）。
 
 ## 环境
 
